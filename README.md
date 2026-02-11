@@ -7,7 +7,7 @@ Centralized security controls, policies, and configurations for organizational r
 | Directory | Description |
 |-----------|-------------|
 | `pre-commit/` | Shared pre-commit hooks for local development |
-| `github-actions/` | Reusable CI/CD security workflows |
+| `.github/workflows/` | Reusable CI/CD security workflows |
 | `claude-config/` | Claude Code hooks and permission policies |
 | `policies/` | Approved actions and resource policies |
 | `docs/` | Security standards and documentation |
@@ -39,7 +39,7 @@ pre-commit install
 
 ### 2. Add GitHub Actions Workflows
 
-Copy the reusable workflows to your organization's shared workflows repository, then reference them:
+Reference the reusable workflows from this repository in your CI/CD pipelines:
 
 ```yaml
 # .github/workflows/security.yml

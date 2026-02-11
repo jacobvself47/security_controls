@@ -56,8 +56,6 @@ jobs:
 
   sast:
     uses: your-org/security-controls/.github/workflows/sast-scan.yml@main
-    with:
-      language: python  # python, javascript, go, java
 ```
 
 **Available workflows:**
@@ -65,7 +63,7 @@ jobs:
 | Workflow | Tools | Purpose |
 |----------|-------|---------|
 | `secret-scanning.yml` | Gitleaks, TruffleHog | Detect exposed secrets |
-| `sast-scan.yml` | Semgrep, CodeQL | Static analysis |
+| `sast-scan.yml` | Semgrep | Static analysis |
 
 ### 3. Enforce Allowed Actions
 
@@ -194,11 +192,6 @@ To customize hooks for a specific repository, copy `.pre-commit-config.yaml` and
 | Input | Default | Description |
 |-------|---------|-------------|
 | `scan-path` | `.` | Path to scan |
-
-**sast-scan.yml:**
-| Input | Default | Description |
-|-------|---------|-------------|
-| `language` | `python` | Primary language for CodeQL |
 
 ## Requirements
 
